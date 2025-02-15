@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Recommendation</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Course Recommendation System</h1>
+        <form action="/predict" method="post">
+            <textarea name="review" placeholder="Enter your course review..." required></textarea>
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction is not none %}
+            <h2>Predicted Rating: {{ prediction }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
